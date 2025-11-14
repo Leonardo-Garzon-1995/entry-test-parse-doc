@@ -8,7 +8,12 @@ function decodeHtmlEntities(str) {
   if (!str) return '';
   // basic named entities + numeric entities
   const named = {
-    nbsp: ' ', lt: '<', gt: '>', amp: '&', quot: '"', apos: "'",
+    nbsp: ' ',
+    lt: '<',
+    gt: '>',
+    amp: '&',
+    quot: '"',
+    apos: "'",
   };
   // replace numeric entities
   str = str.replace(/&#(\d+);?/g, (_m, n) => String.fromCodePoint(Number(n)));
